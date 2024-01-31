@@ -5,8 +5,7 @@ import Hamster from "./components/hamster";
 export default async function Notes() {
   const cookieStore = cookies();
   const supabase = createClient(cookieStore);
-  const { data, error } = await supabase.from("notes").select();
-
+  const { data, error } = await supabase.from("hamster").select();
   return (
     <div>
       {JSON.stringify(data, null, 2)}
